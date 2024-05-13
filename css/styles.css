@@ -1,0 +1,239 @@
+:root{
+    --blanco:#ffffff;
+    --oscuro:#03053a;
+    --primario:#8a2be2;
+    --secundario:#ff0000; 
+    --gris:#868686;
+    --tamano-fuente:23px    
+}
+
+html{
+    font-size: 62,5px;
+}
+body{
+    font-family:  'Poetsen One', sans-serif;
+    font-size: var(--tamano-fuente); /*lrem = 16px */
+    background-image: linear-gradient(to top, var(--primario) 0%, var(--blanco) 100%);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.4rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+fieldset{
+    border: none;
+}
+.sombra{
+    -webkit-box-shadow: -8px 11px 5px 0px rgba(194,2,194,1);
+    -moz-box-shadow: -8px 11px 5px 0px rgba(194,2,194,1);
+    box-shadow: -8px 11px 5px 0px rgba(194,2,194,1);
+    background-color: #ffffff;
+    padding: 2rem;
+}
+/*utilidades*/
+.contenedor{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.bg-secundario{
+    color: var(--primario);
+}
+
+.boton{
+    background-color: var(--primario);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 400px) {
+    .boton{
+        min-width: auto;
+    }
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+.titulo{
+    color:var(--secundario);
+    font-size: 3.8rem;
+    text-align: center;
+}
+
+.titulo span{
+    color:var(--primario);
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    justify-self: space-around;
+    background-color: var(--primario) ;
+}
+
+
+@media (min-width:768px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align:center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 75px;
+    padding:1rem 1rem 1rem 1rem;
+}
+
+
+
+.navegacion-principal a:hover{
+    color: var(--oscuro);
+    background-color: var(--secundario);
+}
+
+/*estilos para el hero*/
+.hero{
+    background-image:url("../img/foto\ 1024x\ 689.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+}
+
+.contenido-hero{
+    background-color:rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0/100%);
+    color:var(--blanco);
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion{
+    display: flex;
+    justify-content: center;
+}
+
+.micontenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem, 1rem, 1rem, 1rem;
+}
+
+@media (min-width:768px) {
+    .micontenido{
+        flex-direction: row;
+    }    
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem, 1rem, 1rem, 1rem;
+}
+
+.contenido h3{
+    font-weight: normal;
+    color: var(--primario);
+}
+
+.contenido p{
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+}
+
+.icono{
+    height: 15rem;
+    width: 15rem;
+    background-color:blue;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    background-color: gray;
+    width: min(60rem,100%);
+    margin: 0 auto 10 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color:blue;
+    font-weight:bold ;
+    display: block;
+}
+
+.imput-text{
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+footer{
+    text-align: center;
+}
