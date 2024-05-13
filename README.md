@@ -1,1 +1,1 @@
-# landigPage
+# home_page
