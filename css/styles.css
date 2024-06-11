@@ -44,7 +44,7 @@ fieldset{
 }
 /*utilidades*/
 .contenedor{
-    width: 75%;
+    width: 800px ;
     margin: 0 auto;
 }
 
@@ -93,7 +93,7 @@ h2{
 }
 
 p{
-    font-size: 1.3rem;
+    font-size: 2.6rem;
 }
 
 .navegacion-principal{

@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a mi pagina web</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poetsen+One&display=swap" rel="stylesheet">
-</head>
-<body>
-    <Head>
-        <h1 class="titulo">Miquel Suasi <span>pagina web</span></h1>
-    </Head>
-    <link rel="stylesheet" href="css/styles.css">
-    <div class="bg-secundario">
-        <nav class="navegacion-principal contenedor">     
-            <a href="index.html">Inicio</a></li>
-            <a href="Tecnologia.html">Tecnologia</a></li>
-            <a href="contacto.html">Contacto</a></li>
-            <a href="Gadgets.html">Gadgets</a></li>
-        </nav>
-    </div>
+<?php
+    include 'db.php';
+    include 'header.php';
+?>  
     <section class="hero">
         <div class="contenido-hero">
             <div class="información">
@@ -38,13 +18,12 @@
             </div>
             <a class="born" href="Tecnologia.html">Tecnologia</a>
         </div>
-    </section>
+    </section> 
     <main class="contenedor sombra">
         <h2>Mi contenido</h2>
         <div class="micontenido">
             <section class="contenido">
                 <h3>Tecnologia</h3>
-                <p>En nuestro blog, nos apasiona mantenerte al día con las últimas innovaciones y tendencias en el mundo de la tecnología. </p>
                 <DIV class="icono"> 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-backpack" width="84" height="84" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -54,10 +33,10 @@
                         <path d="M11 10h2" />
                     </svg>
                 </DIV>
+                <p>En nuestro blog, nos apasiona mantenerte al día con las últimas innovaciones y tendencias en el mundo de la tecnología. </p>
             </section class="contenido" class="contenido">
             <section class="contenido" class="contenido">
                 <h3>Tecnologia</h3>
-                <p>Nuestra misión es proporcionarte información precisa y objetiva que te ayude a tomar decisiones informadas al comprar nuevos gadgets y dispositivos tecnológicos.</p>
                 <div class="icono">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate" width="84" height="84" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -69,10 +48,10 @@
                         <path d="M6 15l2 0" />
                     </svg>
                 </div>
+                <p>Nuestra misión es proporcionarte información precisa y objetiva que te ayude a tomar decisiones informadas al comprar nuevos gadgets y dispositivos tecnológicos.</p>
             </section class="contenido" class="contenido">
             <section class="contenido">
                 <h3>Gadgets</h3>
-                <p>En nuestra sección de gadgets, te sumergirás en un mundo emocionante lleno de dispositivos innovadores y fascinantes. Desde dispositivos portátiles hasta accesorios inteligentes para el hogar, nos dedicamos a explorar y revisar lo último en tecnología de consumo. </p>
                 <div class="icono">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-books" width="84" height="84" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -85,6 +64,7 @@
                         <path d="M16 16l3.923 -.98" />
                     </svg>
                 </div>
+                <p>En nuestra sección de gadgets, te sumergirás en un mundo emocionante lleno de dispositivos innovadores y fascinantes. Desde dispositivos portátiles hasta accesorios inteligentes para el hogar, nos dedicamos a explorar y revisar lo último en tecnología de consumo. </p>
             </section class="contenido">
         </div><!--.micontenido-->
         <section>
@@ -98,46 +78,7 @@
                 <path d="M7 16h10" />
             </svg>
         </section>
-        <section>
-            <h2>Contacto</h2>
-            <form class="formulario" action="">
-                <fieldset>
-                    <legend>Contáctame enviando tus datos</legend>
-                    <div class="contenedor-campos">
-                        <div class="campo">
-                            <DIV>
-                            <label for="">Nombre:</label>
-                            <input class="imput-text" type="text" name="nombre" placeholder="Tu nombre">
-                            </DIV>
-                        </div>
-                        <div class="campo"></div>
-                            <div>
-                                <label for="">Teléfono</label>
-                                <input class="imput-text" type="tel" name="Teléfono" id="" placeholder="Tu Teléfono">
-                            </div>
-                        </div>
-                        <div class="campo"></div>
-                            <div>
-                                <label for="">Correo</label>
-                                <input class="imput-text" type="email" name="correo" id="" placeholder="Tu correo">
-                            </div>
-                        </div>
-                        <div class="campo"></div>
-                            <div>
-                                <label for="">Mensaje</label>
-                                <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                        <div>
-                            <input class="imput-text" class="boton" type="submit" value="Enviar">
-                        </div>
-                    </div><!--contenedor-campos-->
-                </fieldset>
-            </form>
-        </section>
     </main>
-    <footer>
-        <p>Todos los derechos reservados</p>
-    </footer>
-</body>
-</html>
+<?php
+    include 'footer.php';
+?>
