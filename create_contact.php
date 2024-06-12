@@ -20,6 +20,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
     if($result){
         echo"CONTACTO CREADO CON EXITO";
+        header("Location: contacto.php?status=success&msg=MENSAJE GUARDADO!");
         }else{
             echo "ERROR AL CREAR CONTACTO";
         }
