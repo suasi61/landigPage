@@ -18,7 +18,7 @@
                             <div class="campo"></div>
                                 <div>
                                     <label for="">Teléfono</label>
-                                    <input class="imput-text" type="tel" name="Teléfono" id="" placeholder="Tu Teléfono">
+                                    <input class="imput-text" type="tel" name="telefono" id="" placeholder="Tu Teléfono">
                                 </div>
                             </div>
                             <div class="campo"></div>
