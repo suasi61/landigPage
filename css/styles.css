@@ -1,8 +1,8 @@
 :root{
     --blanco:#ffffff;
     --oscuro:#03053a;
-    --primario:#8a2be2;
-    --secundario:#ff0000; 
+    --primario:#00b100;
+    --secundario:#fdaeae; 
     --gris:#868686;
     --tamano-fuente:23px    
 }
@@ -36,9 +36,9 @@ fieldset{
     border: none;
 }
 .sombra{
-    -webkit-box-shadow: -8px 11px 5px 0px rgba(194,2,194,1);
-    -moz-box-shadow: -8px 11px 5px 0px rgba(194,2,194,1);
-    box-shadow: -8px 11px 5px 0px rgba(194,2,194,1);
+    -webkit-box-shadow: -8px 11px 5px 0px var(--primario);
+    -moz-box-shadow: -8px 11px 5px 0px var(--secundario);
+    box-shadow: -8px 11px 5px 0px var(--primario);
     background-color: #ffffff;
     padding: 2rem;
 }
@@ -67,23 +67,23 @@ fieldset{
     border: none;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 300px) {
     .boton{
         min-width: auto;
     }
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 h2{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 .titulo{
-    color:var(--secundario);
-    font-size: 3.8rem;
+    color:rgb(rgb(252, 236, 61));
+    font-size: 3.3rem;
     text-align: center;
 }
 
@@ -93,7 +93,7 @@ h2{
 }
 
 p{
-    font-size: 2.6rem;
+    font-size: 2rem;
 }
 
 .navegacion-principal{
