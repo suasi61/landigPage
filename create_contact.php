@@ -13,14 +13,13 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     echo "TELEFONO: " .$telefono. "<br>";
     echo "correo: " .$correo. "<br>";
     echo "mensaje: " .$mensaje. "<br>";
-    $sql="INSERT INTO contactos (nombre,telefono,correo,mensaje) VALUES ('$nombre','$telefono','$correo','$mensaje')";
-    echo $sql. "<br>";
+    $sql="INSERT INTO contactos (nombre,telefono,correo,mensaje) VALUES (?,?,?,?)";
     $stmt = $conn->prepare($sql);
+    $stmt ->bind_param("ssss", $nombre, $telefono, $correo, $mensaje);
     $result = $stmt->execute();
 
     if($result){
-        echo"CONTACTO CREADO CON EXITO";
-        header("Location: contacto.php?status=success&msg=MENSAJE GUARDADO!");
+            echo"CONTACTO CREADO CON EXITO";
         }else{
             echo "ERROR AL CREAR CONTACTO";
         }
