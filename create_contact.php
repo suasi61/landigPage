@@ -15,12 +15,16 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     echo "mensaje: " .$mensaje. "<br>";
     $sql="INSERT INTO contactos (nombre,telefono,correo,mensaje) VALUES (?,?,?,?)";
     $stmt = $conn->prepare($sql);
-    $stmt ->bind_param("ssss", $nombre, $telefono, $correo, $mensaje);
+    $stmt ->bind_param("ssss", $nombre, $telefono, $correo, $mensaje)
     $result = $stmt->execute();
 
     if($result){
-            echo"CONTACTO CREADO CON EXITO";
-        }else{
+        $stmt->close();
+        $stmt->close();
+        echo"CONTACTO CREADO CON EXITO";
+        header("Location: contacto.php?status=success&msg=MENSAJE GUARDADO!");
+    
+    }else{
             echo "ERROR AL CREAR CONTACTO";
         }
 
