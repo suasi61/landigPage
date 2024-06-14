@@ -30,5 +30,5 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
 }else{
     echo "ERROR EN METODO POST";
+    header("Location: contacto.php?status=error&msg=Error guardando mensaje!");
 }
-header("Location: contacto.php?status=error&msg=Error guardando mensaje!");

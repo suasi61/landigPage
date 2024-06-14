@@ -44,7 +44,7 @@ fieldset{
 }
 /*utilidades*/
 .contenedor{
-    width: 800px ;
+    width: 1000px ;
     margin: 0 auto;
 }
 
@@ -93,7 +93,7 @@ h2{
 }
 
 p{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .navegacion-principal{
@@ -204,8 +204,9 @@ p{
     background-color: gray;
     width: min(60rem,100%);
     margin: 0 auto 10 auto;
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 2rem;
+    text-align: center
 
 }
 
@@ -236,4 +237,17 @@ p{
 
 footer{
     text-align: center;
+}
+
+
+
+/*MESAJES FOMULARIO*/
+.succes{
+    background-color: #00b100;
+    color:white;
+}
+
+.error{
+    background-color: #ff0000;
+    color:white;
 }

@@ -16,12 +16,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <div class="bg-secundario">
         <nav class="navegacion-principal contenedor">     
-            <a href="index.php">Inicio</a></li>
-            <a href="Tecnologia.php">Tecnologia</a></li>
-            <a href="contacto.php">Contacto</a></li>
-            <a href="Gadgets.php">Gadgets</a></li>
-            <a href="cursos.php">Cursos</a></li>
-            <a href="read.php">Leer mensajes</a></li>
+            <a href="index.php">Inicio</a>
+            <a href="Tecnologia.php">Tecnologia</a>
+            <a href="contacto.php">Contacto</a>
+            <a href="Gadgets.php">Gadgets</a>
+            <a href="cursos.php">Cursos</a>
+            <a href="read.php">Leer mensajes</a>
         </nav>
     </div>
 
