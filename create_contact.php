@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
     if($result){
         $stmt->close();
-        $stmt->close();
+        $conn->close();
         echo"CONTACTO CREADO CON EXITO";
         header("Location: contacto.php?status=success&msg=MENSAJE GUARDADO!");
     
@@ -31,3 +31,4 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 }else{
     echo "ERROR EN METODO POST";
 }
+header("Location: contacto.php?status=error&msg=Error guardando mensaje!");

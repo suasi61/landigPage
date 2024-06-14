@@ -1,5 +1,16 @@
 <?php
     include 'header.php';
+    if(isset($_GET['status'])){
+        $status=$_GET['status'];
+        $msg=$_GET['msg'];
+        ?>
+
+        <div class="">
+            <p><?php echo $msg ?></p>
+        </div>
+
+        <?php
+    }
 ?>  
 <h1>Contacto</h1>
 <main>
