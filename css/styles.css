@@ -44,7 +44,7 @@ fieldset{
 }
 /*utilidades*/
 .contenedor{
-    width: 1000px ;
+    width: 1200px ;
     margin: 0 auto;
 }
 
@@ -280,7 +280,7 @@ footer{
 
 .fila{
     display: grid;
-    grid-template-columns: .5fr 2fr 1fr 2fr 3fr;
+    grid-template-columns: .5fr 2fr 1fr 2fr 3fr 1fr;
 }
 
 .campo{
@@ -289,7 +289,7 @@ footer{
 }
 
 .fila.inpar{
-    background-color:antiquewhite
+    background-color:antiquewhite;
 }
 
 .fila.par{
