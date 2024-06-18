@@ -295,3 +295,20 @@ footer{
 .fila.par{
     background-color: aqua;
 }
+
+/*borrar usuarios*/
+
+.borrar{
+    background-color: #00b100;
+    color:white;
+}
+
+.mensaje.borrar{
+    width: 50%;
+    text-align: center;
+    border-radius: 1rem;
+    border: .2rem solid rgb(51, 68, 250);
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-overflow: uppercase;
+}
