@@ -1,36 +1,26 @@
 <?php
 include 'db.php';
+include 'header.php';
 
-if($_SERVER['REQUEST_METHOD']=="POST"){
-    echo "CREANDO CONTACTO NUEVO <BR>";
-    $nombre=$_POST['nombre'];
-    $telefono=$_POST['telefono'];
-    $correo=$_POST['correo'];
-    $mensaje=$_POST['mensaje'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Procesar la actualización del mensaje
+    $id = $_POST['id'];
+    $nombre = $_POST['nombre'];
+    $telefono = $_POST['telefono'];
+    $correo = $_POST['correo'];
+    $mensaje = $_POST['mensaje'];
 
-
-    echo "NOMBRE: " .$nombre. "<br>";
-    echo "TELEFONO: " .$telefono. "<br>";
-    echo "correo: " .$correo. "<br>";
-    echo "mensaje: " .$mensaje. "<br>";
-    $sql="INSERT INTO contactos (nombre,telefono,correo,mensaje) VALUES (?,?,?,?)";
+    $sql = "UPDATE contactos SET nombre=?, telefono=?, correo=?, mensaje=? WHERE id=?";
     $stmt = $conn->prepare($sql);
-    $stmt ->bind_param("ssss", $nombre, $telefono, $correo, $mensaje);
-    $result = $stmt->execute();
+    $stmt->bind_param("ssssi", $nombre, $telefono, $correo, $mensaje, $id);
 
-    if($result){
-        $stmt->close();
-        $conn->close();
-        echo"CONTACTO CREADO CON EXITO";
-        header("Location: contacto.php?status=success&msg=MENSAJE GUARDADO!");
-    
-    }else{
-            echo "ERROR AL CREAR CONTACTO";
-        }
-
-}else{
-    echo "ERROR EN METODO POST";
-    header("Location: contacto.php?status=error&msg=Error guardando mensaje!");
+    if ($stmt->execute()) {
+        header("Location: read.php");  // Redirigir a read.php después de actualizar correctamente
+        exit();  // Asegurarse de que el script se detenga después de la redirección
+    } else {
+        echo "Error al actualizar el mensaje: " . $conn->error;
+    }
+} else {
     // Mostrar el formulario de edición
     $id = $_GET['id'];
     $sql = "SELECT id, nombre, telefono, correo, mensaje FROM contactos WHERE id=?";
