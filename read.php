@@ -46,8 +46,8 @@
                     <div class="campo"><?=$row['telefono']?></div>
                     <div class="campo"><?=$row['correo']?></div>
                     <div class="campo">
-                        <?=$row['mensaje']?></div>
                         <?=substr($row["mensaje"],0,51)?>...
+                    </div>
                         <a href="leer.php?id=<?=$row['id']?>" title="Leer mensaje" style="margin-right: 10px;">
                         <svg xmlns="http://www.w3.org/2000/svg" class="iconn" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round" alt="LEER">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
